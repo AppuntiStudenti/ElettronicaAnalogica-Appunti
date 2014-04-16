@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{amssymb,amsfonts,amsmath,amsthm,dsfont,vmargin, mathtools, braket}
+\usepackage{graphicx, booktabs, caption, subfig, float, wrapfig, pgfplots}
+\usepackage[output-decimal-marker={,}]{siunitx}
+\usepackage{microtype, tikz}
+\usepackage[europeanvoltages,americancurrents]{circuitikz}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} %è un font scalabile, indispensabile per pdfLaTeX se si usa il pacchetto microtype
+\usepackage[latin1]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usetikzlibrary{calc}
+%\usepackage{color}
+%\usepackage{transparent}
+%\usepackage{pstricks}
+
+\DeclareMathOperator{\dB}{dB}
+\DeclareMathOperator{\dec}{dec}
+\DeclareMathOperator{\dBd}{dB/dec}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\newcommand{\Arg}[1]{\phase\left(#1\right)}
+\newcommand{\Logb}[1]{\log_{10}\left(#1\right)}
+
+\newcommand{\numberset}{\mathbb}
+\newcommand{\R}{\numberset{R}}
+\newcommand{\OL}[1]{\overline{#1}}
+\newcommand{\I}{\overline{I}}
+\newcommand{\V}{\overline{V}}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\lap}{\mathcal{L}}
+\newcommand{\Par}{{//}}
+\newcommand{\Th}{{TH}}
+\newcommand{\No}{{NO}}
+\newcommand{\phase}{\measuredangle}
+\newcommand{\Log}{{\log_{10}}}
+
+\setpapersize{A4}
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema} [section]
+
+\theoremstyle{definition}
+\newtheorem{dfn}{Definizione} [section]
+\newtheorem{obs}{Osservazione} [section]
+
+\newtheorem{examplex}{Esempio} [section]
+\newenvironment{example}
+  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\clubsuit$}\examplex}
+  {\popQED\endexamplex}
+
+\newfloat{Circuito}{htbp}{loc}[chapter]
+\newsubfloat{Circuito}
+
+\begin{document}
+
+\author{Simone Laierno}
+\title{Appunti di Elettronica}
+\maketitle
+\tableofcontents
+
+\input{Capitoli/1-Richiami.tex}
+
+\end{document}
